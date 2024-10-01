@@ -1,11 +1,13 @@
 # ProjectEuler
-Hello! This GitHub repository is holding my personal solutions to questions from
-[Project Euler](https://projecteuler.net/) almost exclusively written in Python 
-using the [NumPy](https://numpy.org/) library with detailed explanations! I hope my solutions can 
-help you learn how to solve math problems through coding and hopefully inspre you
-to try out some of your own!
+Hello! This GitHub repo is my personal set of solutions to
+[Project Euler](https://projecteuler.net/) problems. For each question 
+there is a solution written in:
+* Python
+* Java 
+* Rust
+* Julia 
+* NumPy
+as well as an explanation of the algorithm, method and code 
+used to solve the question. 
 
-Solved:
-- 1-50: 1-4,6-8,10,13,14,16,20,22,24,25,28,30,40,45
-- 51-100: 97
 

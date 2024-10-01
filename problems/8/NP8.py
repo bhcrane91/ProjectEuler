@@ -1,3 +1,5 @@
+import numpy as np
+
 number = """73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
 85861560789112949495459501737958331952853208805511
@@ -19,20 +21,14 @@ number = """73167176531330624919225119674426574742355349194934
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450"""
 
-num = "".join([c for c in number if c.isdigit()])
-adj = 13 
-max_prod = 0
-max_strg = ""
-for i in range(0,len(num)-adj):
-    s = num[i:i+adj]
-    p = 1 
-    for j in s:
-        p *= int(j)
-    if p > max_prod:
-        max_prod = p 
-        max_strg = s 
+num = [int(c) for c in number if c != "\n" and c != " "]
+num = np.array(num,dtype=np.int64)
+adj = 13
+scores = []
+for i in range(len(num)-adj+1):
+    sub = num[i:i+adj]
+    # print(len(sub))
+    scores.append(np.prod(sub))
+    
 
-print(max_prod,max_strg)
-
-# split by 0?
-# second approach remove all nums within 12 spaces of 0's then brute force
+print(np.max(np.array(scores)))

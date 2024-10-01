@@ -1,20 +1,22 @@
-"""
-Find the 10001st prime
-"""
-import numpy as np
+import math as m 
 
-# Finds nth prime
-def prime(n):
-    primes = [2]
-    while len(primes) < n:
-        a = primes[len(primes)-1]
-        b = a ** 2
-        nums = np.linspace(a,b,num=b-a+1,dtype=int)
-        for p in primes:
-            nums = nums[nums % p != 0]
-        primes += nums.tolist()
-    print(primes[n-1])
-        
-# prime(100)
-# prime(1000)
-prime(10001)
+def check_prime(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3,int(m.sqrt(n))+1,2):
+        if n % i == 0:
+            return False
+    return True 
+
+n = 0
+i = 1
+t = 10001
+while n < t:
+    i += 1
+    n += check_prime(i)
+
+print(n,i)

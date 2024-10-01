@@ -2,9 +2,15 @@
 Find the difference between the sum of the squares of the 
 first one hundred natural numbers and the square of the sum.
 """
-import numpy as np 
+"""
+Sum[k=1][n] k = (n * (n+1)) // 2
+Sum[k=1][n] k**2 = (n * (n+1) * (2*n + 1)) // 6 
+Sum[k=1][n] k**3 = (n**2 * (n+1)**2) // 4
+"""
 
-nums = np.linspace(1,100,num=100,dtype=int)
-square_of_sum = np.sum(nums) ** 2
-sum_of_square = np.sum(nums ** 2)
-print(square_of_sum - sum_of_square)
+n = 100 
+
+sum_of_squares = (n * (n+1) * (2*n + 1)) // 6
+square_of_sums = ((n * (n+1)) // 2) ** 2 
+
+print(square_of_sums - sum_of_squares)

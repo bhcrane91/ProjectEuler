@@ -1,0 +1,5 @@
+primes
+prime factorization
+check primality
+num -> array in base b 
+factorial 

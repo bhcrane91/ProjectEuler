@@ -3,15 +3,15 @@ A palindromic number reads the same both ways. The largest palindrome made
 from the product of two 2-digit numbers is 9009 = 91*99
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
-import numpy as np
-    
 def product(digits):
-    low = (10**(digits-1))
-    high = (10**digits)-1
-    x = np.arange(low,high+1)
-    y = x
-    from_table = np.unique(np.outer(x,y)).astype(str)
-    pals = np.array([int(n) for n in from_table if n[::-1] == n]).astype(int)
-    print(np.max(pals))
-    
-product(3)
+    bot = 10**(digits-1)
+    top = 10**digits
+    max = (0,0,0)
+    for i in range(top,bot-1,-1):
+        for j in range(top,bot-1,-1):
+            p = i*j
+            if p > max[0] and str(p) == str(p)[::-1]:
+                max = (p,i,j)
+    return max
+
+print(product(3))

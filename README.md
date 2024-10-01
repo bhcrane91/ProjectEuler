@@ -6,8 +6,9 @@ there is a solution written in:
 * Java 
 * Rust
 * Julia 
-* NumPy
-as well as an explanation of the algorithm, method and code 
-used to solve the question. 
+* NumPy.
+
+Additionally there are explanations of the algorithm, method and code 
+used to solve each question. 
 
 

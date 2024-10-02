@@ -3,7 +3,8 @@ import sys
 from tabulate import tabulate as tb
 import pandas as pd
 
-s = sp.run("zsh run_prob.sh 3", shell=True, capture_output=True)
+
+s = sp.run(f"zsh run_prob.sh {sys.argv[1]}", shell=True, capture_output=True)
 q = str(s.stderr).split("\\n")
 
 data = {

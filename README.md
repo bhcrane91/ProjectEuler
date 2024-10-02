@@ -14,7 +14,7 @@ for each problem.
 
 | Problem | Java | Python | NumPy | Rust | Julia | Explanation | 
 |---------|------|--------|-------|------|-------|-------------|
-|[1](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/1)|❌|❌|❌|❌|❌|❌|
+|[1](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/1)|✅|✅|✅|✅|✅|✅|
 |[2](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/2)|❌|❌|❌|❌|❌|❌|
 |[3](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/3)|❌|❌|❌|❌|❌|❌|
 |[4](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/4)|❌|❌|❌|❌|❌|❌|

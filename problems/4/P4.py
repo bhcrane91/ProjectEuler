@@ -1,8 +1,3 @@
-"""
-A palindromic number reads the same both ways. The largest palindrome made 
-from the product of two 2-digit numbers is 9009 = 91*99
-Find the largest palindrome made from the product of two 3-digit numbers.
-"""
 def product(digits):
     bot = 10**(digits-1)
     top = 10**digits
@@ -14,4 +9,5 @@ def product(digits):
                 max = (p,i,j)
     return max
 
-print(product(3))
+ans = product(3)
+print(f"Python | Max: {ans[0]} | Factors: ({ans[1]},{ans[2]})")

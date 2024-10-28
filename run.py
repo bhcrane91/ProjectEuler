@@ -35,6 +35,7 @@ for lang in langs:
         d[lang]["lang"] = "java"
     elif lang == "r":
         sp.run(f"rustc {codepath}{prob}/R{prob}.rs", shell=True)
+        sp.run(f"mv R{prob} {codepath}{prob}/", shell=True)
         call = f"{codepath}{prob}/R{prob} "
         d[lang]["lang"] = "rust"
     elif lang == "l":
@@ -57,6 +58,7 @@ data = {
     "user": []
 }
 
+print(d)
 for k,t in d.items():
     col = t["time"].split(" ")[:2:-2]
     row = t["time"].split(" ")[:1:-1][1::2]

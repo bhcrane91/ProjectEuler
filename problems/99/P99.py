@@ -12,7 +12,7 @@ NOTE: The first two lines in the file represent the numbers in the example given
 """
 import math as m 
 
-with open("txtF/base_exp.txt", "r") as f:
+with open("base_exp.txt", "r") as f:
     data = [int(num) for line in f.read().split("\n") for num in line.split(",")]
 
 bases = data[0::2]

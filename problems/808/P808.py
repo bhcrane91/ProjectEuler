@@ -56,7 +56,7 @@ def is_palindrome(n):
 
 
 rps = set()
-cutoff = 2
+cutoff = 50
 i = 0
 """
 while len(rps) < cutoff:

@@ -20,10 +20,3 @@ botten = sum[:10]
 topten = sum[::-1][:10]
 print(sum)
 print(np.sum(topten),np.sum(botten),pl.string_from_digits(sum))
-
-
-
-
-
-    
-

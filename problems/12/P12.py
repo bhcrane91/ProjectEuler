@@ -16,6 +16,7 @@ Let us list the factors of the first seven triangle numbers:
 We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors?
 """
+
 import numpy as np
 
 def prime_factors(n):
@@ -35,7 +36,7 @@ def prime_factors(n):
         
     return np.prod(np.unique(factors,return_counts=True)[1] + 1)
 
-print(prime_factors(28))
+#print(prime_factors(28))
 
 # t(n) = n*(n+1)/2
 divs = 0
@@ -47,12 +48,5 @@ while divs < 500:
     tridvs = prime_factors(tri)
     divs = tridvs if tridvs > divs else divs 
     i = i+1 if i % 2 == 0 else i+3
-print(i,tri,tridvs)
-
-
-    
-    
-
-
-    
-    
+# print(i,tri,tridvs)
+print(f"Triangle Number ({i}): {tri} | Divisors: ({tridvs})")

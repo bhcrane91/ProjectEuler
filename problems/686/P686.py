@@ -24,7 +24,7 @@ time py 686.py 123 678910
 193060223
 /usr/local/bin/python3.11 686.py 123 678910  40.77s user 0.02s system 99% cpu 40.802 total
 """
-print(p(int(sys.argv[1]),int(sys.argv[2])))
+print(p(123,678910))
 
 
 

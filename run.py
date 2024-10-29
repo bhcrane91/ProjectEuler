@@ -58,7 +58,6 @@ data = {
     "user": []
 }
 
-print(d)
 for k,t in d.items():
     col = t["time"].split(" ")[:2:-2]
     row = t["time"].split(" ")[:1:-1][1::2]

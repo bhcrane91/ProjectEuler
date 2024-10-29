@@ -10,7 +10,7 @@ import numpy as np
 from tqdm import tqdm 
 
 def collatz(n):
-    i = 0
+    i = 1
     x = n
     while x != 1:
         if x % 2 == 0:
@@ -18,17 +18,16 @@ def collatz(n):
         else:
             x = 3*x + 1
         i += 1
-    if x == 1:
-        i += 1
     return i,n
 
 max = 0
 num = 0
-for i in tqdm(range(1,1000000)):
+target = 1000000
+for i in range(1,target):
     curr, cn = collatz(i)
     if curr > max:
         max = curr
         num = cn
         
-print(max,num)
+print(f"Maximum Collatz Sequence for c[0] < {target}: c[0] = {num} | Length = {max}")
     

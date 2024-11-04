@@ -12,6 +12,5 @@ fn main() {
         }
     }
 
-    println!("Rust");
-    println!("Sum of multiples of 3 or 5 below {}: {}", arg, ans);
+    println!("Rust: Sum of multiples of 3 or 5 below {}: {}", arg, ans);
 }

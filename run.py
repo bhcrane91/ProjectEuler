@@ -8,8 +8,8 @@ p = ap.ArgumentParser(prog="Project Euler Driver")
 p.add_argument(
     "-l",
     type=str,
-    default="npjrl",
-    help="Run solution for each language key: j (Java), n (NumPy), p (Python), r (Rust), l (Julia)"
+    default="npjrlc",
+    help="Run solution for each language key: j (Java), n (NumPy), p (Python), r (Rust), l (Julia), c (C)"
 )
 
 p.add_argument(
@@ -44,6 +44,11 @@ for lang in langs:
     elif lang == "n": 
         call = f"python3.11 {codepath}{prob}/NP{prob}.py"
         d[lang]["lang"] = "numpy"
+    elif lang == "c":
+        sp.run(f"gcc {codepath}{prob}/C{prob}.c -o C{prob}", shell=True)
+        sp.run(f"mv C{prob} {codepath}{prob}/", shell=True)
+        call = f"{codepath}{prob}/C{prob}"
+        d[lang]["lang"] = "c"
 
     print("CALL: ",call)
     s = sp.run(f"time {call}", shell=True, executable="/bin/zsh" , capture_output=True, cwd=f"{codepath}{prob}")

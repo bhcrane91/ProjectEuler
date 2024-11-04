@@ -4,7 +4,6 @@ class J1 {
 		// int arg = Integer.valueOf(args[0]);
 		int arg = 1000;
 		for (int i = 0; i < arg; i++) ans += i % 5 == 0 || i % 3 == 0 ? i : 0;
-		System.out.println("Java");
-		System.out.println("Sum of multiples of 3 or 5 below " + arg + ": " + ans);
+		System.out.println("Java: Sum of multiples of 3 or 5 below " + arg + ": " + ans);
 	}
 }

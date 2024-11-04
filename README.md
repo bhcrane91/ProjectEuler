@@ -32,8 +32,8 @@ explanations.
 |[11](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/11)|❌|❌|❌|❌|❌|❌|
 |[12](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/12)|✅|✅|❌|❌|❌|❌|
 |[13](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/13)|❌|❌|❌|❌|❌|❌|
-|[14](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/14)|❌|❌|❌|❌|❌|❌|
-|[15](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/15)|❌|❌|❌|❌|❌|❌|
+|[14](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/14)|✅|✅|❌|❌|❌|❌|
+|[15](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/15)|✅|✅|❌|❌|❌|❌|
 |[16](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/16)|❌|❌|❌|❌|❌|❌|
 |[17](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/17)|❌|❌|❌|❌|❌|❌|
 |[18](https://github.com/bhcrane91/ProjectEuler/tree/main/problems/18)|❌|❌|❌|❌|❌|❌|

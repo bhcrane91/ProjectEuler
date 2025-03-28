@@ -16,7 +16,7 @@ fn main() {
         }
     }
 
-    println!("Rust | Max: {} | Factors: ({},{})", max[0], max[1], max[2]);
+    println!("R -> Max: {} | Factors: ({},{})", max[0], max[1], max[2]);
 }
 
 fn check_palindrome(s: &str) -> bool {

@@ -8,6 +8,7 @@ def to_binary(n):
         n -= 2**pow 
         powers.append(pow)
     binary = np.zeros(np.max(powers)+1,dtype=int)
+    print(n,powers,binary)
     for p in powers:
         binary[p] = 1
     return binary[::-1]

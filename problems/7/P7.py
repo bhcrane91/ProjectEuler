@@ -19,4 +19,4 @@ while n < t:
     i += 1
     n += check_prime(i)
 
-print(n,i)
+print(f"P -> {n}st prime = {i}")

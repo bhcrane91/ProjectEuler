@@ -73,5 +73,4 @@ for a in range(-999,1000):
         if run > streak[0]:
             streak = (run,a,b)             
 
-print(streak)
-print(streak[1]*streak[2])
+print(streak,streak[1]*streak[2])

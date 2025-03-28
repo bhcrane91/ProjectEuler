@@ -23,7 +23,7 @@ for m in range(2,100):
 max = 0
 for k,v in triangles.items():
     if len(v) > max:
-        print(k,len(v),v)
+        # print(k,len(v),v)
         max = len(v)
-
+        print(max, k, v)
 

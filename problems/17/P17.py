@@ -62,7 +62,6 @@ def parse_num(n):
 
 dicts = [digits,tens,hundreds]
 letters = 0
-sol = 0
 for i in range(1,1000):
     numstr = ''
     teen = i % 100
@@ -76,8 +75,7 @@ for i in range(1,1000):
             numstr = 'and' + numstr
         numstr = dicts[idx][l] + numstr 
     letters += len(numstr)
-    if sol != letters:
-        print(i, numstr, len(numstr), letters)
+    # print(i, numstr, len(numstr), letters)
     
     
 letters += len('onethousand')

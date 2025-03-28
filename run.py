@@ -22,7 +22,7 @@ langs = [c for c in a.l]
 prob = a.n
 
 print()
-d = {c:{"out":"","time":""} for c in langs}
+d = {c:{"out":"","time":"","key":c.upper()} for c in langs}
 
 codepath = "/Users/bhc/vscode/ProjectEuler/problems/"
 for lang in langs:
@@ -57,6 +57,7 @@ for lang in langs:
 
 data = {
     "lang": [],
+    "key": [],
     "total": [],
     "cpu": [],
     "system": [],
@@ -69,8 +70,11 @@ for k,t in d.items():
     for i in range(len(col)):
         data[col[i]].append(row[i])
     data["lang"].append(t["lang"])
+    data["key"].append(t["key"])
+    data["total"][-1] = data["total"][-1]+"s"
  
 df = pd.DataFrame(data)
+
 print()
 print("Process Stats: ")
 print()

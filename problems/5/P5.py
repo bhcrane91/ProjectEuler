@@ -32,4 +32,4 @@ def lcm(a,b):
     """
     return a * b // gcd(a,b)
 
-print(reduce(lcm, [i+1 for i in range(10)]))
+print(reduce(lcm, [i+1 for i in range(20)]))

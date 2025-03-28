@@ -5,10 +5,11 @@ import java.lang.Math;
 class J5 {
 	public static void main(String[] args) {
 		long myLCM = 1L;
-		for (long i = 2L; i <= 20L; i++) {
+		long top = 20L;
+		for (long i = 2L; i <= top; i++) {
 			myLCM = lcm(myLCM,i);
 		}
-		System.out.println(myLCM);
+		System.out.println("J -> " + myLCM);
 	}
 
 	public static List<Long> prime_factors(long n) {
@@ -31,7 +32,7 @@ class J5 {
 	public static long gcd(long a, long b) {
 		List<Long> primeFactorsA = prime_factors(a);
 		List<Long> primeFactorsB = prime_factors(b);
-		long div = 1l;
+		long div = 1L;
 		for (long n: primeFactorsA) {
 			if (primeFactorsB.contains(n)) {
 				div *= n;

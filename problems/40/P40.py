@@ -1,16 +1,14 @@
-import numpy as np
+i = 1000000
+n = 1
+j = 0
+pow = 0
+ans = 1
 
-num = 1000000
-digits = ''
-nums = np.arange(num).astype(str)
-i = 0
-while len(digits) < num+1:
-    digits += nums[i]
-    i += 1
-    
-print(digits)
-    
-digits = np.array([digit for digit in digits]).astype(int)
-pows = 10 ** np.arange(7)
-chosen = np.prod(digits[pows])
-print(chosen)
+while j < i:
+    ans *= (n % 10)
+    for p in range(10**pow,10**(pow+1)):
+        n += 1
+        j += (p+1)
+    pow += 1
+    print(n,ans,j,pow)
+

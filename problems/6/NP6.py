@@ -7,4 +7,4 @@ import numpy as np
 nums = np.linspace(1,100,num=100,dtype=int)
 square_of_sum = np.sum(nums) ** 2
 sum_of_square = np.sum(nums ** 2)
-print(square_of_sum - sum_of_square)
+print("N -> :",square_of_sum - sum_of_square)

@@ -1,36 +1,40 @@
-import numpy as np
-import math 
-triangle = """75
-95 64
-17 47 82
-18 35 87 10
-20 04 82 47 65
-19 01 23 75 03 34
-88 02 77 73 07 63 67
-99 65 04 28 06 16 70 92
-41 41 26 56 83 40 80 70 33
-41 48 72 33 47 32 37 16 94 29
-53 71 44 65 25 43 91 52 97 51 14
-70 11 33 28 77 73 17 78 39 68 17 57
-91 71 52 38 17 14 91 43 58 50 27 29 48
-63 66 04 68 89 53 67 30 73 16 69 87 40 31
-04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"""
+with open("triangle.txt","r") as f:
+    triangle = [[int(k) for k in row.split(" ")]  for row in f.read().split("\n")][::-1]
 
-triangle = [row.split(" ") for row in triangle.split("\n")]
-last = len(triangle[len(triangle)-1])
-tri = np.zeros((last,last),dtype=int)
-for t in range(len(triangle)):
-    tri[t][0:t+1] = triangle[t]
+rowlen = len(triangle[0])
+trilen = len(triangle)
+for t in range(trilen):
+    triangle[t] = triangle[t] + [0]*(rowlen-len(triangle[t]))
 
-tri = tri[::-1]
+for row in triangle:
+    print("{",",".join([str(s) for s in row]),"},")
 
-print(tri,"\n")
+def roll(arr,step):
+    sign = 1 if step > 0 else -1
+    l = len(arr)
+    step %= (l*sign)
+    if step == 0:
+        return arr
+    return arr[-step:] + arr[:((l*sign)-step)]
 
-for row in range(len(tri)-1):
-    right = np.roll(tri[row],-1)+tri[row+1]
-    left = (tri[row]+tri[row+1])
-    right[len(tri)-row-1:] = 0
-    left[len(tri)-row-1:] = 0
-    tri[row+1] = np.maximum(left,right)
+def arrmax(a,b):
+    if len(a) != len(b):
+        print("Needs to be the same length")
+        return 
+    return [max(a[i],b[i]) for i in range(len(a))]
+
+def idxsum(a,b):
+    if len(a) != len(b):
+        print("Needs to be the same length")
+        return 
+    return [a[i]+b[i] for i in range(len(a))]
+
+for row in range(trilen-1):
+    right = idxsum(roll(triangle[row],-1),triangle[row+1])
+    left = idxsum(triangle[row],triangle[row+1])
+    right[trilen-row-1:] = [0]*len(right[trilen-row-1:])
+    left[trilen-row-1:] = [0]*len(left[trilen-row-1:]) 
+    triangle[row+1] = arrmax(left,right)
+
+print(triangle[trilen-1][0])
     
-print(tri)

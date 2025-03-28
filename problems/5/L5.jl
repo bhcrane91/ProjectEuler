@@ -41,4 +41,4 @@ for i = 2:20
    global multiple = lcm(multiple,i)
 end 
 
-println(multiple)
+println("L -> " + multiple)

@@ -11,5 +11,5 @@ for i in range(3,15):
 def ijsq(n):
     return len({i**j for i in range(2, n+1) for j in range(2, n+1)})
 
-for i in range(101):
-    print(i, ijsq(i))
+# for i in range(101):   
+print(100, ijsq(100))

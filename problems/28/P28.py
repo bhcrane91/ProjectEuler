@@ -45,14 +45,14 @@ print(grid)
 
 side = 1001
 top = side**2
-corners = 2*side-1
+# corners = 2*side-1
 sum = top
-print(top)
+# print(top)
 while top != 1:
     for i in range(4):
         top -= (side-1)
         sum += top 
-        print(top)
+        # print(top)
     side -= 2
 print(sum)
         

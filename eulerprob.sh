@@ -10,5 +10,6 @@ cp ../../solutions/${d}.py P${d}.py
 touch NP${d}.py
 touch R${d}.rs
 touch L${d}.jl
+touch C${d}.c
 echo "class J${d} {\n\tpublic static void main(String[] args) {\n\n\t}\n}" >> J${d}.java
 touch README.md

@@ -49,4 +49,4 @@ while divs < 500:
     divs = tridvs if tridvs > divs else divs 
     i = i+1 if i % 2 == 0 else i+3
 # print(i,tri,tridvs)
-print(f"Triangle Number ({i}): {tri} | Divisors: ({tridvs})")
+print(f"Triangle Number ({i}): {tri} | Divisors: {tridvs}")

@@ -1,0 +1,11 @@
+fn main() {
+    for a in 100..1000 {
+        for b in (a)..(1000-a) {
+            let c = 1000 - a - b;
+            if a*a+b*b==c*c {
+                println!("R -> Triple: ({},{},{}) | Product: {}",a,b,c,(a*b*c));
+                return;
+            }
+        }
+    }
+}

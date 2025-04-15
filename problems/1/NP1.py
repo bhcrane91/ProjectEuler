@@ -11,4 +11,4 @@ threes = nums[nums % 3 == 0]
 fives = nums[nums % 5 == 0]
 combined = np.union1d(threes,fives)
 ans = np.sum(combined)
-print(f"NumPy: Sum of multiples of 3 or 5 below {t}: {ans}")
+print(f"Sum of multiples of 3 or 5 below {t}: {ans}")

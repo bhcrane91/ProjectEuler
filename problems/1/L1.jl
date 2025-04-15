@@ -5,7 +5,7 @@ function sum_of_multiples(arg::Int)
             ans += i
         end
     end
-    println("Julia: Sum of multiples of 3 or 5 below $arg: $ans")
+    println("Sum of multiples of 3 or 5 below $arg: $ans")
 end
 
 # Get the command line argument

@@ -12,6 +12,6 @@ int main() {
         b += a;
         a = tmp;
     }
-    printf("C: Sum of even-valued Fibonacci terms < %d: %d\n", target, sum);
+    printf("Sum of even-valued Fibonacci terms < %d: %d\n", target, sum);
     return 0;
 }

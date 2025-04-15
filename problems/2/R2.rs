@@ -11,5 +11,5 @@ fn main() {
             sum += b;
         }
     }
-    println!("Rust: Sum of even-valued Fibonacci terms < {}: {}", target, sum);
+    println!("Sum of even-valued Fibonacci terms < {}: {}", target, sum);
 }

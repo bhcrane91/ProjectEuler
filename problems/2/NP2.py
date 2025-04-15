@@ -8,4 +8,4 @@ while f[-1] < target:
 f = np.array(f)
 f = np.sum(f[f %2 == 0])
 
-print(f"NumPy: Sum of even-valued Fibonacci terms < {target}: {f}")
+print(f"Sum of even-valued Fibonacci terms < {target}: {f}")

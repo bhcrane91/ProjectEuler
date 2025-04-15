@@ -11,6 +11,6 @@ class J2 {
 			b += a;
 			a = tmp;
 		}
-		System.out.println("Java: Sum of even-valued Fibonacci terms < " + target + ": " + sum);
+		System.out.println("Sum of even-valued Fibonacci terms < " + target + ": " + sum);
 	}
 }

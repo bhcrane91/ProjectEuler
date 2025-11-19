@@ -4,7 +4,7 @@ class J9 {
 			for (int b = a+1; b < 1000-a; b++) {
 				int c = 1000 - a - b;
 				if (a*a+b*b == c*c) {
-					System.out.println("J -> Triple: (" + a + "," + b + "," + c + ") | Product: " + a*b*c);
+					System.out.println("Triple: (" + a + "," + b + "," + c + ") | Product: " + a*b*c);
 					return;
 				}
 			}

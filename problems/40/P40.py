@@ -1,14 +1,18 @@
-i = 1000000
-n = 1
-j = 0
-pow = 0
-ans = 1
+import math as m
+# n = 1000000 : 10**6
+n = 10
+s = ""
+c = 0
+p = 0
+for i in range(2):
+    for j in range(10**i,10**(i+1)):
+        q = c + i + 1
+        # print(i,j,c,q)
+        if q >= 10**p and c <= 10**p:
+            s += str((j // (10**(q - c))) % 10)
+            p += 1
+            print(i,j,s,p,c,q)
+        c = q
+        
 
-while j < i:
-    ans *= (n % 10)
-    for p in range(10**pow,10**(pow+1)):
-        n += 1
-        j += (p+1)
-    pow += 1
-    print(n,ans,j,pow)
 

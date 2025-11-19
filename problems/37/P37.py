@@ -1,53 +1,36 @@
-import numpy as  np
+import math
 
 def check_prime(n):
-    if n <= 1:
-        return False
+	if (n <= 1):
+		return False
+	if (n == 2):
+		return True
+	if (n % 2 == 0):
+		return False
+	for i in range(3,int(math.sqrt(n))+1,2):
+		if (n % i == 0):
+			return False
+	return True
 
-    if n == 2:
-        return True
-    
-    if n % 2 == 0:
-        return False
-        
-    for i in range(3,np.sqrt(n).astype(int)+1,2):
-        if n % i == 0:
-            return False
-        
-    return True 
+def next_prime(n):
+	n += 1
+	while not check_prime(n):
+		n += 1
+	return n
 
-def n_primes(n):
-    primes = []
-    i = 1
-    while len(primes) < n:
-        if check_prime(i):
-            primes.append(i)
-        i += 1
-    return primes
+truncatable = 11
+prime = next_prime(10)
+s = 0 
 
-def primes_below(n):
-    primes = []
-    for i in range(1000):
-        if check_prime(i):
-            primes.append(i)
-    return primes 
-
-i = 11
-trunks = []
-primes = set([p for p in n_primes(100000) if (p > 10)])
-for p in primes:
-    sprime = str(p)
-    sprimes = [int(sprime[i:]) for i in range(1,len(sprime))] + [int(sprime[:i]) for i in range(1,len(sprime))]
-    sprime = set([check_prime(s) for s in sprimes])
-    if sprime == set([True]):  
-        trunks.append(p)
-    if len(trunks) == i:
-        break
-
-print(len(trunks),trunks,sum(trunks))
-
-
-    
-    
-    
-    
+while truncatable > 0:
+	trunc = True 
+	for i in range(1,len(str(prime))):
+		if not (check_prime(prime % (10**i)) and check_prime(prime // (10**i))):
+			trunc = False 
+	if trunc:
+		print(prime)
+		truncatable -= 1
+		s += prime 
+	prime = next_prime(prime)
+		
+print(s)

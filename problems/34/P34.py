@@ -33,3 +33,4 @@ print(digit_factorials)
 print(np.sum(digit_factorials))
 
     
+print([(i,fctrl(i)) for i in range(20)])

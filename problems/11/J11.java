@@ -48,10 +48,11 @@ class J11 {
 		List<List<Integer>> diags = new ArrayList<>();
 		for (int i = matrix.size()-1; i >= 0; i--) {
 		}
+		return new ArrayList<ArrayList<Integer>>();
 	}
 
 	public static List<List<Integer>> diagonalSWNE(List<List<Integer>> matrix, int subLength) {
-
+		return new ArrayList<ArrayList<Integer>>();
 	}
 
 	public static int[][] listToArr(List<List<Integer>> list) {

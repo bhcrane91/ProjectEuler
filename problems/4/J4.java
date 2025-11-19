@@ -18,7 +18,7 @@ class J4 {
 				}
 			}
 		}
-		System.out.println("J -> Max: " +  max[0] + " | Factors: (" + max[1] + "," + max[2] + ")");
+		System.out.println("Max: " +  max[0] + " | Factors: (" + max[1] + "," + max[2] + ")");
 	}
 
 	public static boolean checkPalindrome(String str) {

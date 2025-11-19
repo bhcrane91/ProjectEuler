@@ -5,5 +5,5 @@ of the numbers from 1 to 20?
 """
 import numpy as np
 
-print(np.lcm.reduce(np.arange(20)+1))
+print(f"{np.lcm.reduce(np.arange(20)+1)}")
 

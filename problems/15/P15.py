@@ -1,19 +1,12 @@
-import numpy as np
-
-# Diagonal Sequence
-# Binomial Coefficients
-def binomial():
-    pass
-
-# (via) Pascals Triangle
 def pascal(s):
-    if s == 0:
-        return 1
-    pascal_row = np.zeros(2*s,dtype=np.int64)
+    pascal_row = [0]*(2*s)
     pascal_row[0] = 1
-    for row in range(2*s):
-        pascal_row = pascal_row + np.roll(pascal_row,1)
-    return np.max(pascal_row)
+    for row in range(0,2*s):
+        for i in range(0,2*s):
+            pascal_row[i] += pascal_row[(i+1)%(2*s)]
+    return pascal_row
 
-print(pascal(20))
+t = 20
+tri = pascal(t)
+print(f"Paths in {t}x{t} square: {max(tri)}")
         

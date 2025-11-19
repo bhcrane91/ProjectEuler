@@ -8,7 +8,7 @@ class J7 {
 			prime++;
 			if (checkPrime(prime)) n += 1;
 		}
-		System.out.println("J -> " + n + "st prime = " + prime);
+		System.out.println(n + "st prime = " + prime);
 	}
 
 	public static boolean checkPrime(int n) {

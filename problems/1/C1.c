@@ -2,7 +2,7 @@
 
 int main() {
     int ans = 0;
-    int arg = 1000;  // Set the value directly, as in your Java code.
+    int arg = 1000;
     for (int i = 0; i < arg; i++) {
         ans += (i % 5 == 0 || i % 3 == 0) ? i : 0;
     }

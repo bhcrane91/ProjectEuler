@@ -38,6 +38,4 @@ class J21 {
 		for (int item: set) sum += item;
 		return sum;
 	}
-
-
 }

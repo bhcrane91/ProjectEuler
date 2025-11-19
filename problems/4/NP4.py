@@ -7,6 +7,6 @@ def product(digits):
     y = x
     from_table = np.unique(np.outer(x,y)).astype(str)
     pals = np.array([int(n) for n in from_table if n[::-1] == n]).astype(int)
-    print(f"N -> Max: {np.max(pals)}")
+    print(f"Max: {np.max(pals)}")
     
 product(3)

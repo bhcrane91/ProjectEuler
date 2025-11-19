@@ -5,7 +5,7 @@ int main() {
 		for (int b = a; b < 1000-a; b++) {
 			int c = 1000 - a - b;
 			if (a*a+b*b == c*c) {
-				printf("C -> Triple: (%d,%d,%d) | Product: %d",a,b,c,(a*b*c));
+				printf("Triple: (%d,%d,%d) | Product: %d",a,b,c,(a*b*c));
 				return 0;
 			}
 		}

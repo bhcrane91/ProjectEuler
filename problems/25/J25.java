@@ -1,20 +1,25 @@
+import java.lang.Math;
+
 class J25 {
 	public static void main(String[] args) {
-		double a = 1.0;
-		double b = 1.0;
-		int i = 0;
-		int x = 0;
-		while (x < 1000) {
-			double n = a + b;
-			a = b; 
-			b = n;
-			i++;
-			if (String.valueOf(b).contains("E")) {
+		double a = 1;
+		double b = 1;
+		int i = 1;
+		double x = a+b;
+		int j = 2;
+		int n = 1000;
+		while (i < n) {
+			j += 1;
+			x = a + b;
+			int e = ((int) Math.log10(x)) - ((int) Math.log10(b));
+			i += e;
+			a = b;
+			b = x;
+			if (e > 0) {
 				a /= 10;
 				b /= 10;
-				x += 1;
 			}
 		}
-		System.out.println(i + " " + a + " " + b);
+		System.out.println("First Fibonacci term with " + n + " digits: F_n -> n = " + j);
 	}
 }

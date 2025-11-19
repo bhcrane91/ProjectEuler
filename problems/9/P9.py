@@ -9,4 +9,4 @@ for a in range(1,1000):
         c =1000-a-b
         # print(a,b,c)
         if a**2+b**2==c**2:
-            print(f"P -> Triple: ({a},{b},{c}) | Product: {a*b*c}")
+            print(f"Triple: ({a},{b},{c}) | Product: {a*b*c}")

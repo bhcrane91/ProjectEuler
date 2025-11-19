@@ -27,7 +27,7 @@ int main(){
             }
         }
     }
-    printf("C -> Max: %d | Factors: (%d,%d)\n",max[0],max[1],max[2]);
+    printf("Max: %d | Factors: (%d,%d)\n",max[0],max[1],max[2]);
     free(max);
     return 0;
 }

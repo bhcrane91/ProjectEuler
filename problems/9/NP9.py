@@ -17,7 +17,7 @@ c2 = (1000-np.add.outer(a,b))**2
 ans = np.where(c1==c2)
 ans = list(zip(ans[0],ans[1]))
 
-print(f"N -> Triple: ({ans[0][0]+100},{ans[1][0]+100},{np.sqrt(c1[ans[0][0]][ans[0][1]]).astype(int)}) | Product: {(ans[0][0]+100)*(ans[1][0]+100)*np.sqrt(c1[ans[0][0]][ans[0][1]]).astype(int)}")
+print(f"Triple: ({ans[0][0]+100},{ans[1][0]+100},{np.sqrt(c1[ans[0][0]][ans[0][1]]).astype(int)}) | Product: {(ans[0][0]+100)*(ans[1][0]+100)*np.sqrt(c1[ans[0][0]][ans[0][1]]).astype(int)}")
 
 
 

@@ -12,6 +12,7 @@ class J37 {
 				}
 			}
 			if (trunc) {
+				System.out.println(prime);
 				truncatable -= 1;
 				sum += prime;
 			}

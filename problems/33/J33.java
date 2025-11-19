@@ -5,36 +5,39 @@ import java.util.ArrayList;
 
 class J33 {
 	public static void main(String[] args) {
-		for (int j = 11; j < 100; j++) {
-			for (int i = 10; i < j; i++) {
-				List<Integer> a = digits(i);
-				List<Integer> b = digits(j);
-
-				List<Integer> result = a.stream()
-					.distinct()
-					.filter(b::contains)
-  					.collect(Collectors.toList());
-
-				if (i % 10 != 0 && j % 10 != 0 && !result.isEmpty()) {
-					int r = result.get(0);
-					a.remove(r);
-					b.remove(r);
-
-					if (b.get(0) != 0 && i/j == a.get(0)/b.get(0)) {
-						System.out.println(i + " " + j + " " + a.get(0) + " " +  b.get(0));
+		int a = 1;
+		int b = 1;
+		for (int i = 1; i < 10; i++) {
+			for (int j = 1; j < 10; j++) {
+				int n = (i * 10) + j;
+				for (int k = 9; k > i; k--) {
+					int m = (j * 10) + k;
+					if ((k * n) == (m * i)) {
+						a *= i;
+						b *= k;
+						// System.out.println(n + " " + m);
 					}
-				}	
+				}
 			}
 		}
+
+		int g = gcd(a,b);
+		while (g != 1) {
+			a /= g;
+			b /= g;
+			g = gcd(a,b);
+		}
+		System.out.println(b);
 	}
 
-	public static List<Integer> digits(int n) {
-		List<Integer> digits = new ArrayList<>();
-		while (n > 0) {
-			int last = n % 10;
-			digits.add(last);
-			n = (n - last) / 10;
+	public static int gcd(int a, int b) {
+		int temp = b;
+		while (b != 0) {
+			temp = b;
+			b = a % b;
+			a = temp;
 		}
-		return digits;
+		return a;
 	}
+
 }

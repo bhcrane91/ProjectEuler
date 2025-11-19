@@ -17,6 +17,6 @@ int main(){
     while (n < 10001) {
         if (checkPrime(prime++) == 1) n+=1;
     }
-    printf("C -> %dst prime = %d\n",n,prime);
+    printf("%dst prime = %d\n",n,prime-1);
     return 0;
 }

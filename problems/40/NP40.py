@@ -7,6 +7,7 @@ i = 0
 while len(digits) < num+1:
     digits += nums[i]
     i += 1
+    # print(i,digits)
     
 # print(digits)
     

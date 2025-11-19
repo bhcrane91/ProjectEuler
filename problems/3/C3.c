@@ -33,7 +33,7 @@ int main() {
         factors[f] = n;
         f++;
     }
-    printf("C -> Prime Factors of %"PRIu64": [",num);
+    printf("Prime Factors of %"PRIu64": [",num);
     for (int i = 0; i < f-1; i++) {
         printf("%" PRIu32 ", ",factors[i]);
     }

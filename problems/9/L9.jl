@@ -3,7 +3,7 @@ function main()
         for b in (a):(1000-a)
             c = 1000-a-b
             if c^2==a^2+b^2
-                print("L -> Triple: ($(a),$(b),$(c)) | Product: $(a*b*c)")
+                print("Triple: ($(a),$(b),$(c)) | Product: $(a*b*c)")
                 return
             end
         end

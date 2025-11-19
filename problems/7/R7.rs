@@ -5,7 +5,7 @@ fn main() {
         prime += 1;
         if check_prime(prime) {n += 1};
     }
-    println!("R -> {}st prime = {}",n,prime)
+    println!("{}st prime = {}",n,prime)
 }
 
 fn check_prime(n: i32) -> bool {

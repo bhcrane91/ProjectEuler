@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Arrays;
 
-
 class J31 {
 
 	private static final Set<Integer> coins = new HashSet<>(Arrays.asList(200, 100, 50, 20, 10, 5, 2, 1));
@@ -12,13 +11,11 @@ class J31 {
 	public static void main(String[] args) {
 		int n = 200;
         List<List<Integer>> result = partitions(n, null);
-        
 		/* 
         for (List<Integer> partition : result) {
             System.out.println(partition);
         }
 		*/
-		
 		System.out.println(result.size());
 	}
 

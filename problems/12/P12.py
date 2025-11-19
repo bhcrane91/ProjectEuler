@@ -19,34 +19,19 @@ What is the value of the first triangle number to have over five hundred divisor
 
 import numpy as np
 
-def prime_factors(n):
-    factors = []
-
-    while n % 2 == 0:
-        factors.append(2)
-        n //= 2
-        
-    for i in range(3,np.sqrt(n).astype(int),2):
-        while n % i == 0:
-            factors.append(i)
-            n //= i
-
-    if n > 1:
-        factors.append(n)
-        
-    return np.prod(np.unique(factors,return_counts=True)[1] + 1)
-
-#print(prime_factors(28))
-
 # t(n) = n*(n+1)/2
-divs = 0
-i = 2
-tri = 0 
-tridvs = 0
-while divs < 500:
-    tri = i * (i+1) // 2
-    tridvs = prime_factors(tri)
-    divs = tridvs if tridvs > divs else divs 
-    i = i+1 if i % 2 == 0 else i+3
-# print(i,tri,tridvs)
-print(f"Triangle Number ({i}): {tri} | Divisors: {tridvs}")
+div = 1
+itr = 1
+tri = 1 
+while div < 500:
+    itr += 1 
+    tri += itr
+    div = 0
+    for i in range(1,np.sqrt(tri).astype(int)+1):
+        if tri % i == 0:
+            if tri // i == i:
+                div += 1
+            else:
+                div += 2
+
+print(f"Triangle Number ({itr}): {tri} | Divisors: {div}")

@@ -47,6 +47,7 @@ def min_path_sum(pyr):
   print(f"Minimum Path Sum = {pyr[len(pyr)-1][0]}")
   
 pyr = to_pyramid(matrix)
+print(pyr)
 min_path_sum(pyr)
     
 

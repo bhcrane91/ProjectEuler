@@ -7,7 +7,7 @@ function  main()
             n += 1
         end 
     end 
-    print("L -> $(n)st prime = $(prime)")
+    print("$(n)st prime = $(prime)")
 end
 
 function check_prime(n::Int)::Bool

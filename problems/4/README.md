@@ -6,6 +6,17 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 ### Explanation
 
+For this question there isn't a better solution better than a brute force
+search but there are some optimizations we can use. 
+
+A palindrome is a sequence that is identical forward and backward. So for 
+each product of 3-digit numbers we just need to check that the number is 
+a palindrome, but we only need to check half of the digits. 
+
+Mathematically we can write this out as:
+
+f(a,b) = a*b
+P(n) = 
 
 
 ### Process Stats/Program Output

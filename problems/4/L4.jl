@@ -16,7 +16,7 @@ function main()
         end
     end
 
-    println("Julia | Max : $(max[1]) | Factors: ($(max[2]),$(max[3]))")
+    println("Max: $(max[1]) | Factors: ($(max[2]),$(max[3]))")
 end
 
 function check_palindrome(s::String)

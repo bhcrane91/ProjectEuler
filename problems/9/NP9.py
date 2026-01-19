@@ -4,35 +4,23 @@ a**2 + b**2 = c**2. There exists exactly one Pythagorean triplet for which
 a + b + c = 1000. Find the product abc.
 """
 import numpy as np
+
 """
-a**2 + b**2 = c**2
-a + b + sqrt(a**2 + b**2) = 1000
-sqrt(a**2 + b**2) = 1000 - b - a
-a**2 + b**2 = (1000 - b - a)**2
-a**2 + b**2 = 1000**2 - 1000b - 1000a - 1000b + b**2 + ab - 1000a + ab + a**2
-0 = 1000**2 - 2000a - 2000b + 2ab
-2000(a + b) = 1000**2 + 2ab
+a**2 + b**2 = c**2 | a+b+c = 1000
+-> a+b+c = a+b+np.sqrt(a**2+b**2) = 1000
 """
-def euclid(m,n):
-    a = m**2 - n**2
-    b = 2*m*n 
-    c = m**2 + n**2
-import sys 
-i = 0
-for a in range(100,1000):
-    for b in range(a+1,1000-a-1):
-        c =1000-a-b
-        print(a,b,c)
-        left = (a**2 + b**2)
-        right = c**2
-        val = (left == right)
-        if val:
-            print(f"Answer: abc = {a*b*c}")
-            sys.exit(0)
-        elif left > right:
-            break 
-    else:
-        continue 
+
+a = np.arange(100,901)
+b = 1000-a
+c1 = np.add.outer(a**2,b**2)
+c2 = (1000-np.add.outer(a,b))**2
+ans = np.where(c1==c2)
+ans = list(zip(ans[0],ans[1]))
+
+print(f"Triple: ({ans[0][0]+100},{ans[1][0]+100},{np.sqrt(c1[ans[0][0]][ans[0][1]]).astype(int)}) | Product: {(ans[0][0]+100)*(ans[1][0]+100)*np.sqrt(c1[ans[0][0]][ans[0][1]]).astype(int)}")
+
+
+
         
         
         

@@ -11,7 +11,7 @@ class J14 {
 				num = seq[0];
 			}
 		}
-		System.out.println("Maximum Collatz Sequence for c[0] < " + target + ": c[0] = " + num + " | Length = " + max);
+		System.out.println("Maximum Collatz Sequence for c[0] < " + target + ": c[0] = " + num + " | Length: " + max);
 	}
 
 	public static long[] collatz(int n) {

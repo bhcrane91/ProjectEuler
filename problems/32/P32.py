@@ -40,6 +40,7 @@ def partition_with_k_parts(n, k, allowed, max_value=None):
     return partitions
 
 p = [q for q in partition_with_k_parts(9,3,allowed=[n for n in range(1,9)])] # if q[0] == (sum(q[1:]) - 1) or q[0] == sum(q[1:]) or q[0] == sum(q[1:]) + 1]
+print(p)
 u = set()
 a = 0
 b = {str(q) for q in range(1,10)}

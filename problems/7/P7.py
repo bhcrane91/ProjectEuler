@@ -12,11 +12,11 @@ def check_prime(n):
             return False
     return True 
 
-n = 0
-i = 1
+n = 1
+i = 3
 t = 10001
 while n < t:
-    i += 1
     n += check_prime(i)
+    i += 2
 
-print(n,i)
+print(f"{n}st prime = {i-2}")

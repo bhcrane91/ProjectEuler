@@ -18,8 +18,41 @@ class J11 {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+	}
 
-		horizontal_sub(listToArr(nums), 4);
+	public static List<List<Integer>> horizontal(List<List<Integer>> matrix, int subLength) {
+		List<List<Integer>> rows = new ArrayList<>();
+		for (int i = 0; i < matrix.size(); i++) {
+			for (int j = 0; j < (rows.get(i).size() - subLength); j++) {
+				rows.add(matrix.get(i).subList(j, j+subLength));
+			}
+		}
+		return rows;
+	}
+
+	public static List<List<Integer>> vertical(List<List<Integer>> matrix, int subLength) {
+		List<List<Integer>> cols = new ArrayList<>();
+		for (int i = 0; i < matrix.get(0).size(); i++) {
+			for (int j = 0; j < (matrix.size() - subLength); j++) {
+				List<Integer> sub = new ArrayList<>();
+				for (int k = j; k < (j + subLength); k++) {
+					sub.add(matrix.get(k).get(i));
+				}
+				cols.add(sub);
+			}
+		}
+		return cols;
+	}
+
+	public static List<List<Integer>> diagonalNWSE(List<List<Integer>> matrix, int subLength) {
+		List<List<Integer>> diags = new ArrayList<>();
+		for (int i = matrix.size()-1; i >= 0; i--) {
+		}
+		return new ArrayList<ArrayList<Integer>>();
+	}
+
+	public static List<List<Integer>> diagonalSWNE(List<List<Integer>> matrix, int subLength) {
+		return new ArrayList<ArrayList<Integer>>();
 	}
 
 	public static int[][] listToArr(List<List<Integer>> list) {

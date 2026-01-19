@@ -20,13 +20,13 @@ def check_prime(n):
 def p41():
     max = 0
     for i in range(9,1,-1):
-        for p in permutations([j for j in range(1,i+1)]):
+        for p in permutations([j for j in range(i,0,-1)]):
             q = sum([m*(10**n) for n, m in enumerate(p[::-1])])
             # print(p,q)
             if check_prime(q) and q > max:
                 print("Prime: ",q)
-                max = q
-    return q
+                return q
+    return None
     
 ans = p41()
             

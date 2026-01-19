@@ -16,7 +16,7 @@ fn main() {
         factors.push(n);
     }
     
-    print!("Rust -> Prime Factors of {}: ",num);
+    print!("Prime Factors of {}: ",num);
     for factor in &factors {
         print!("{} ",factor);
     }

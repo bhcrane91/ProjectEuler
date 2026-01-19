@@ -18,11 +18,11 @@ class J4 {
 				}
 			}
 		}
-		System.out.println("Java | Max: " +  max[0] + " | Factors: (" + max[1] + "," + max[2] + ")");
+		System.out.println("Max: " +  max[0] + " | Factors: (" + max[1] + "," + max[2] + ")");
 	}
 
 	public static boolean checkPalindrome(String str) {
-		for(int i = 0; i < str.length(); i++) {
+		for(int i = 0; i < str.length()/2; i++) {
 			if (str.charAt(i) != str.charAt(str.length()-i-1)) {
 				return false;
 			}

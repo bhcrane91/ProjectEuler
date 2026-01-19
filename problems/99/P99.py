@@ -28,8 +28,8 @@ for pair in pairs:
     if n > maxVal:
         maxVal = n
         max = pairs.index(pair)
-        print(max+1,maxVal)
+        # print(max+1,maxVal)
 
-print(f"Answer -> Max Value: {maxVal} | Line Number: {max+1}")
+print(f"P: Answer -> Max Value: {maxVal} | Line Number: {max+1}")
 
 

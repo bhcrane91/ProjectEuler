@@ -15,7 +15,7 @@ function prime_factors(n::Int)
     if n > 1
         push!(factors,round(Int,n))
     end
-    println("Julia -> Prime Factors of $num: [$(join(factors," "))] | Largest -> $(factors[end])")
+    println("Prime Factors of $num: [$(join(factors," "))] | Largest -> $(factors[end])")
 end 
 
 prime_factors(600851475143)

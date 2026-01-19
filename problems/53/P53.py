@@ -15,6 +15,7 @@ b = 100
 n = 1
 r = 1
 nums = factorials(a,b)
+print(nums)
 ans = 0
 target = 1e6
 for n in range(a,b+1):

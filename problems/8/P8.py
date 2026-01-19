@@ -16,7 +16,7 @@ for i in range(0,len(num)-adj):
         max_strg = s 
         places = (i,i+adj)
 
-print(max_prod,max_strg,places)
+print(f"{max_prod} | {max_strg} {places}")
 
 # split by 0?
 # second approach remove all nums within 12 spaces of 0's then brute force

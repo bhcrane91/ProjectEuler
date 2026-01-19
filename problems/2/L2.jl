@@ -10,7 +10,6 @@ function sum_even_fibs(arg::Int)
             sum += b 
         end 
     end 
-    println("Julia")
     println("Sum of even-valued Fibonacci terms < $arg: $sum")  
 end 
 

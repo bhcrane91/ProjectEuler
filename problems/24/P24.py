@@ -1,7 +1,6 @@
 import numpy as np
 
-#
-def permutate(sequence):
+def permutate(sequence,j):
     if len(sequence) == 0:
         # Base case: Return a list with a single empty sequence
         return [[]]

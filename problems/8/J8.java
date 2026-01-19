@@ -29,8 +29,10 @@ class J8 {
 			if (curr > max) {
 				max = curr;
 				submax = num.substring(i, i+13);
+                places[0] = i;
+                places[1] = i + 13;
 			}
         }
-		System.out.println(max + " | " + submax);
+		System.out.println(max + " | " + submax  + " (" + places[0] + ", " + places[1] + ")");
 	}
 }

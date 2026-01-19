@@ -1,37 +1,51 @@
-"""
-Define s(n) to be the smallest number that has a digit sum of n. For example s(10) = 19.
-Let S(k) = \sum_{n=1}^k s(n). You are given S(20) = 1074.
-
-Further let f_i be the Fibonacci sequence defined by f_0=0, f_1=1 and f_i=f_{i-2}+f_{i-1} for all i \ge 2.
-
-Find \sum_{i=2}^{90} S(f_i). Give your answer modulo 1000000007.
-"""
-
-def bastardized(N):
-    n = 9 
-    m = N % n 
-    p = N // n
-    print(n,m,p)
-    top = sum(10**i for i in range(p))
-    return (45 * top) + (((m * (m+1))//2) * 10**p) + (n * (9*(top // 10))) + (m * 9 * top) 
-# apply modulus 10e_ + 7 to each of the terms to get rid of 'top'
-print(bastardized(317811))
-
-"""
-a = 0
-f = 1
-S = 0
-for i in range(2,90+1):
-    tmp = f 
-    f += a 
-    a = tmp
-    print("before") 
-    S += (bastardized(f) % 1000000007)
-    print(i,f)
-    print("after")
-
-print(S)
-
-"""
-        
+def partition_with_k_parts(n, k, max_value=None):
+    if max_value is None:
+        max_value = n  # By default, the maximum value of any part is n
     
+    if k == 0:
+        return [[]] if n == 0 else []
+    if n == 0:
+        return []
+    
+    partitions = []
+    
+    # Iterate from the minimum possible value for a partition part to max_value
+    for i in range(min(n, max_value), 0, -1):
+        # Recur by reducing both the target sum n and the number of parts k
+        
+        for p in partition_with_k_parts(n - i, k - 1, i):
+            partitions.append([i] + p)
+    
+    return partitions
+
+# print(partition_with_k_parts(10000,2))
+import math as m
+
+MOD = 1000000007
+def C(k):
+    d = k - (k % 9)
+    kd = k - d 
+    # 1 -> d 
+    F = lambda y: 10 ** ((y-9)//9)
+    expr_1 = sum([(9 * (6*F(9*i) - 1)) % MOD for i in range(1,d//9+1)])
+    # d -> k
+    Q = 10 ** (k // 9)
+    sum_i = lambda i: (i+1)*i // 2
+    expr_2 = Q * (kd + sum_i(kd)) - kd
+    return expr_1 + expr_2
+
+a = 0
+b = 1 
+i = 1
+l = 90
+SA = 0
+while i < l:
+    t = a + b 
+    a = b 
+    b = t
+    i += 1
+    SA += C(b) % MOD
+    print(i,b,SA)
+    
+
+# min n dig sum = (n%9) -> 9x(n/9)

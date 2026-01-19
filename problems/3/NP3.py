@@ -16,6 +16,6 @@ primes = []
 num = 600851475143
 highest = prime(np.sqrt(num).astype(np.int64))
 highest = highest[num % highest == 0]
-print(f"NumPy -> Prime Factors of {num}: {highest} | Largest -> {highest[-1]}")
+print(f"Prime Factors of {num}: {highest} | Largest -> {highest[-1]}")
    
 

@@ -26,4 +26,4 @@ while (primes / corners) > 0.1:
         corners += 1
     s += 2
     
-    print(s, primes, corners, primes/corners)
+print(s, primes, corners, primes/corners)

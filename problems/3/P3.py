@@ -20,5 +20,5 @@ def prime_factors(n):
 
 num = 600851475143
 factors = prime_factors(num)
-print(f"Python -> Prime Factors of {num}: {factors} | Largest -> {factors[-1]}")
+print(f"Prime Factors of {num}: {factors} | Largest -> {factors[-1]}")
 

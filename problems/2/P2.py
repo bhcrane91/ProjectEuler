@@ -9,5 +9,4 @@ while b < target:
     if a % 2 == 0:
         sum += a
         
-print("Python")
 print(f"Sum of even-valued Fibonacci terms < {target}: {sum}")

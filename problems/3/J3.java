@@ -19,7 +19,7 @@ class J3 {
 		}
 		if (n > 1) list.add(n);
 
-		System.out.print("Java -> Prime Factors of " + num +  ": ");
+		System.out.print("Prime Factors of " + num +  ": ");
 		for (long j: list) {
 			System.out.print(j + " ");
 		}

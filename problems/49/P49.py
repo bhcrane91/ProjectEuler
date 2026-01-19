@@ -26,7 +26,7 @@ for a in primes:
             diff = b - a
             if (b + diff) in primes and diff == target:
                 nums = [a,b,b+diff]
-                news = np.unique([Counter(str(n)) for n in nums])
+                news = np.unique([Counter(str(n)) for n in nums]) 
                 if len(news) == 1:
                     triplets.append(nums)          
         

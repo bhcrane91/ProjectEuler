@@ -21,7 +21,7 @@ for word in words:
     for letter in word:
         score += letter_val[letter]
     if score in triangle_nums:
-        print(word,score)
+        # print(word,score)
         triangle_words += 1
     
 print(triangle_words)

@@ -13,7 +13,7 @@ def prime(n):
         for p in primes:
             nums = nums[nums % p != 0]
         primes += nums.tolist()
-    print(primes[n-1])
+    print(f"{n}st prime = {primes[n-1]}")
         
 # prime(100)
 # prime(1000)

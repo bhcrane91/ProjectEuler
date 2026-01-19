@@ -1,22 +1,13 @@
-import pylong as pl
-import numpy as np 
+def modexp(a,b,d):
+    if b == 0:
+        return 1
+    s = 1
+    for i in range(b):
+        s = (s*a) % (10**d)
+    return s 
 
-nums = np.arange(1,1001,dtype=np.int64)
-expn = np.zeros((len(nums),10),dtype=np.int64)
-for i,n in enumerate(nums):
-    curr = pow(n,n)%(10**10)
-    if curr == 0:
-        curr = np.zeros(10,dtype=np.int64)
-    else:
-        curr = pl.digits_from_scalar(curr)
-        if len(curr) != 10:
-            curr = pl.resize(curr,10)
-    expn[i] = curr 
-print(expn)
-a = expn[0]
-for e in expn[1:]:
-    a = pl.add(a,e)
+S = 0 
+for i in range(1,1001):
+    S += modexp(i,i,10)
 
-print(a)
-print(pl.string_from_digits(a))
-    
+print(S % 10**10)

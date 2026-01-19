@@ -7,9 +7,8 @@ there is (or will be!) a solution written in:
 * Java 
 * Rust
 * Julia 
+* C
+* Golang
+* C++
 
-Additionally there are explanations of the algorithm, method and code 
-used to solve each question. The table below shows the status of solution 
-for each problem.
-
-My in depth explanations can be found on my Notion Page!
+My in depth explanations can be found on my [Notion Page](https://ben-crane.notion.site/Benjamin-Crane-1f937b3d86304511bc2276a2b354920d)!

@@ -34,15 +34,14 @@ for i in range(1,N):
     n = i
     l = True
     for j in range(50):
-        print(i,n)
         n = n + rev(n)
         if n == rev(n):
             l = False
-            
+            # print(n)
             break
     lychrel += l
 
-print(lychrel)
+print(f"Lychrel Numbers below {N}: {lychrel}")
 
 
         

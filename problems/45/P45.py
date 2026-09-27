@@ -13,6 +13,9 @@ Find the next triangle number that is also pentagonal and hexagonal.
 
 # Note T[a] = H[b] for all a = 2b-1, or when a is odd
 # therefore n has to be 
+# 2a**2 - a = 0.5 * (3b**2 -b)
+# 4a**2 - 2a - 3b**2 + b = 0
+# 
 
 import numpy as np 
 

@@ -5,10 +5,11 @@ import java.lang.Math;
 class J5 {
 	public static void main(String[] args) {
 		int ans = 1;
-		for (int i = 1; i < 20; i++) {
+		int n = 20;
+		for (int i = 1; i < n; i++) {
 			ans = lcm(i,ans);
 		}
-		System.out.println(ans);
+		System.out.println("LCM of numbers 1 to " + n + ": " + ans);
 	}
 
 	public static int gcd(int a, int b) {

@@ -31,14 +31,26 @@ def relative_prime(a,b):
 	return gcd(a,b) == 1
 
 def totient(n):
-	return sum([relative_prime(n,i) for i in range(1,n)])		
-	
-n = 2
-t = totient(n)
-f = n / t  
+	if check_prime(n):
+		return n - 1
+	return sum([relative_prime(n,i) for i in range(1,n)])	
 
+def sieve_phi(n):
+    phi = list(range(n+1))
+    for p in range(2, n+1):
+        if phi[p] == p:  # p is prime
+            phi[p] = p - 1
+            for i in range(2 * p, n + 1, p):
+                phi[i] = (phi[i] // p) * (p - 1)
+    return phi
+
+	
 N = 1000000
-c = 3
-
-
-	
+m = [-1,-1,-1]
+for i, x in enumerate(sieve_phi(N)):
+	try:
+		if i/x > m[2]:
+			m = [i,x,i/x]
+			print(m)
+	except Exception as e:
+		pass

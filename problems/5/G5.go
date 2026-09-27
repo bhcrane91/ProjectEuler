@@ -19,8 +19,9 @@ func lcm(a int, b int) int {
 
 func main() {
 	ans := 1 
-	for i := 1; i < 20; i++ {
+	n := 20
+	for i := 1; i < n; i++ {
 		ans = lcm(i,ans)
 	}
-	fmt.Printf("%d\n",ans)
+	fmt.Printf("LCM of numbers 1 to %d: %d\n",n,ans)
 }

@@ -26,4 +26,7 @@ while (primes / corners) > 0.1:
         corners += 1
     s += 2
     
-print(s, primes, corners, primes/corners)
+# s - 1 because s=4 accounts for the 1 in the center and the change between corner and next coner in sprial wehn 
+# next level starts 
+# ie 9 -> 13 in the 2nd to 3rd level
+print(s-1, primes, corners, primes/corners)

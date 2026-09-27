@@ -34,5 +34,4 @@ while streak != distinct:
         nums = []
     n += 1
 
-print(nums)
-    
+print(f"Streak: {nums[0]} -> {nums[-1]}")

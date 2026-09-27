@@ -43,7 +43,7 @@ def divisors(n):
 cutoff = 28124  
 abundants = []
 doubles = []
-for i in tqdm(range(12,cutoff)):
+for i in range(12,cutoff):
     if sum(divisors(i)) > i:
         abundants.append(i)
         for j in abundants:  

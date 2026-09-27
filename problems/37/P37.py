@@ -28,9 +28,10 @@ while truncatable > 0:
 		if not (check_prime(prime % (10**i)) and check_prime(prime // (10**i))):
 			trunc = False 
 	if trunc:
-		print(prime)
+		# print(prime)
 		truncatable -= 1
 		s += prime 
 	prime = next_prime(prime)
 		
-print(s)
+# print(s)
+print(f"Sum of truncatable primes: {s}")

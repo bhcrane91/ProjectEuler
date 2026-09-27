@@ -19,9 +19,12 @@ def long_divide(a,b):
 
 rem = ""
 lmx = 0 
+k = 0
 for i in range(1,1000):
     crm, cyc = long_divide(1,i)
     if len(cyc) > lmx:
         lmx = len(cyc)
         rem = crm 
-        print(i,len(cyc))
+        k = i
+        # print(i,len(cyc))
+print(f"{k}: {lmx}")

@@ -58,7 +58,7 @@ def parse_num(n):
         n -= last
         i += 1
         num.append(last)
-    return num 
+    return num
 
 dicts = [digits,tens,hundreds]
 letters = 0

@@ -47,10 +47,10 @@ def dumb(n):
             ways[i] += ways[i-num]
             # print(ways)
     return ways[n]
-   
+
  
 # for i in range(101):
 #     print(i,len(summations(i+1)),dumb(i))
-
-summations(10)
+print(dumb(100))
+# summations(10)
     

@@ -12,13 +12,14 @@ class J37 {
 				}
 			}
 			if (trunc) {
-				System.out.println(prime);
+				// System.out.println(prime);
 				truncatable -= 1;
 				sum += prime;
 			}
 			prime = nextPrime(prime);
 		}
-		System.out.println(sum);
+		// System.out.println(sum);
+		System.out.println("Sum of truncatable primes: " + sum);
 	}
 
 	public static boolean checkPrime(int n) {

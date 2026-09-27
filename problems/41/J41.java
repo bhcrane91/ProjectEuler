@@ -21,7 +21,7 @@ class J41 {
         Arrays.sort(arr); // Start with the smallest permutation
         do {
 			char rra = arr;
-			reverse(rra)
+			reverse(rra);
             System.out.println(reverse(Arrays.toString(arr),0,arr.length));
         } while (nextPermutation(arr));
     }

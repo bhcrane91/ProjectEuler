@@ -12,11 +12,9 @@ bouncy = 0
 total = 99
 while (bouncy/total) < 0.99:
     total += 1
-    num = [c for c in str(total)]
-    up = sorted(num)
+    up = "".join(sorted(str(total)))
     down = up[::-1]
-    if num != up and num != down:
-        # print(num,up,down)
+    if total != int(up) and total != int(down):
         bouncy += 1
     else:
         pass 

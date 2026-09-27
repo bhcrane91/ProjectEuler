@@ -1,21 +1,20 @@
 class J55 {
 	public static void main(String[] args) {
-		long lychrel = 0;
+		int lychrel = 0;
 		long N = 10000;
 		for (long i = 1; i < N; i++) {
 			long n = i;
-			boolean l = true;
-			long j = 0;
-			while (j < 50 && l == true) {
-				System.out.println(i + " " + n);
-				long r = reverse(n);
-				n += r;
-				l = (n == r) ? false : true;
-				j++;
+		 	int l = 1;
+			for (int j = 0; j < 50; j++) {
+				n += reverse(n);
+				if (n == reverse(n)) {
+					l = 0;
+					break;
+				}
 			}
-			lychrel += l == true ? 1 : 0;
+			lychrel += l;
 		}
-		System.out.println(lychrel);
+		System.out.println("Lychrel Numbers below " + N + ": " + lychrel);
 	}
 
 	public static long reverse(long n) {

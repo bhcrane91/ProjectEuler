@@ -13,4 +13,6 @@ def check_prime(n):
     return True 
 
 N = 1000000
-print(f"Number of Circular Primes below {N}: {len([i for i in range(N) if sum([check_prime(int(str(i)[j:]+str(i)[:j])) for j in range(len(str(i)))]) == len(str(i))])}")
+ans = [i for i in range(N) if sum([check_prime(int(str(i)[j:]+str(i)[:j])) for j in range(len(str(i)))]) == len(str(i))]
+print(f"Number of Circular Primes below {N}: {len(ans)}")
+# print(ans)

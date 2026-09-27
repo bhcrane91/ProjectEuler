@@ -12,7 +12,7 @@ class J58 {
 			}
 			s += 2;
 		}
-		System.out.println(s + " " + primes + " " + corners + " " + ((float)primes/corners));
+		System.out.println(s-1 + " " + primes + " " + corners + " " + ((float)primes/corners));
 	}
 
 	public static boolean checkPrime(int n) {
